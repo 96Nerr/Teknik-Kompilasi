@@ -1,0 +1,3 @@
+Analisis Leksikal
+Semntiks Error
+Sintaks Error
