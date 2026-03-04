@@ -110,6 +110,31 @@ Berikut contoh himpunan token dasar untuk bahasa mirip C:
 - COMMENT: `//.*|/\\*(.|\\n)*?\\*/` (hapus/abaikan)
 - WHITESPACE: `[ \\t\\r\\n]+` (abaikan)
 
+## Contoh Latihan Token
+1. Keyword
+2. Identifier
+3. Konstanta
+4. Delimiter
+5. Operator
+
+```cpp
+int main(){ 
+    int a = 10; 
+    float b = 3.14; 
+    if (a > 5) {
+        b = b+a;
+    }
+
+    return 0;
+}
+
+1. Keyword = int, float, if, return
+2. Identifier = main, a, b, if, return
+3. Konstanta = 10, 3.14, 5, 0
+4. Delimiter = (, ), {, }, ;
+5. Operator = =, >, =, +
+
+
 ## 10. Contoh File Flex (flex / lex)
 
 Contoh sederhana `mini.l`:
