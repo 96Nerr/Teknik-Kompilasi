@@ -133,6 +133,25 @@ int main(){
 3. Konstanta = 10, 3.14, 5, 0
 4. Delimiter = (, ), {, }, ;
 5. Operator = =, >, =, +
+```
+
+###latihan 3
+``` python
+#program menghitung diskon
+harga = 250000.50
+diskon = 0.1
+is_member = True
+total = harga - (harga * diskon) if is_member and total > 100000:
+    print("Anda mendapat potongan tambahan")
+else:
+    print("Tidak ada potongan tambahan")
+```
+1. Keyword = if, else, True
+2. Identifier = harga, diskon, is_member, total
+3. Konstanta = 250000.50, 0.1, 100000
+4. Delimiter = (, ), :, .
+5. Operator = =, -, *, >, and
+
 
 
 ## 10. Contoh File Flex (flex / lex)
