@@ -129,7 +129,7 @@ int main(){
 }
 
 1. Keyword = int, float, if, return
-2. Identifier = main, a, b, if, return
+2. Identifier = main, a, b
 3. Konstanta = 10, 3.14, 5, 0
 4. Delimiter = (, ), {, }, ;
 5. Operator = =, >, =, +
