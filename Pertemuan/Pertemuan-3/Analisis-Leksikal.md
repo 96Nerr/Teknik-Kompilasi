@@ -146,12 +146,15 @@ total = harga - (harga * diskon) if is_member and total > 100000:
 else:
     print("Tidak ada potongan tambahan")
 ```
-1. Keyword = if, else, True
+1. Keyword = if, else, print
 2. Identifier = harga, diskon, is_member, total
-3. Konstanta = 250000.50, 0.1, 100000
-4. Delimiter = (, ), :, .
+3. Konstanta = 250000.50, 0.1, 100000, True, ""
+4. Delimiter = (, ), :, .,
 5. Operator = =, -, *, >, and
 
+- INTEGER_LITERAL: 100000
+- FLOAT_LITERAL: 250000.50, 0.1
+- STRING_LITERAL : True, ""
 
 
 ## 10. Contoh File Flex (flex / lex)
