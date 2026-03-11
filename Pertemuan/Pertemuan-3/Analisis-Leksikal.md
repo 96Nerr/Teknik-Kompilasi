@@ -111,11 +111,19 @@ Berikut contoh himpunan token dasar untuk bahasa mirip C:
 - WHITESPACE: `[ \\t\\r\\n]+` (abaikan)
 
 ## Contoh Latihan Token
-1. Keyword
-2. Identifier
-3. Konstanta
-4. Delimiter
-5. Operator
+### Definisi dan Penjelasan Token Dasar
+
+Berikut pengertian dan penjelasan singkat untuk masing-masing token dasar:
+
+- **Keyword**: Kata-kata reservasi yang memiliki arti khusus dalam bahasa pemrograman (mis. `if`, `int`, `return`). Biasanya dikenali sebagai token terpisah atau melalui lookup setelah pola `IDENTIFIER`. Contoh implementasi: daftar kata kunci `(if|else|while|for|return|int|float|char|void)`.
+
+- **Identifier**: Nama yang dibuat programmer untuk variabel, fungsi, kelas, dan lain-lain. Pola umum: `[A-Za-z_][A-Za-z0-9_]*`. Dikembalikan dengan atribut lexeme (nilai nama asli); setelah dikenali biasanya dicek terhadap tabel keyword untuk menentukan apakah lexeme adalah `KEYWORD`.
+
+- **Konstanta**: Literal nilai seperti bilangan (integer, float), string, karakter, atau boolean. Sering dipilah menjadi sub-tipe (`INTEGER_LITERAL`, `FLOAT_LITERAL`, `STRING_LITERAL`, `CHAR_LITERAL`, `BOOL_LITERAL`). Contoh pola: integer `[0-9]+`, float `[0-9]+\.[0-9]+([eE][+-]?[0-9]+)?`, string `"(\\.|[^"\\])*"`. Perlu penanganan overflow, escape sequence, dan deteksi unterminated.
+
+- **Delimiter**: Tanda baca yang memisahkan struktur sintaksis (mis. tanda kurung, kurawal, titik koma, koma). Contoh: `(`, `)`, `{`, `}`, `;`, `,`, `:`. Pola biasanya single-character seperti `[(){};,]`.
+
+- **Operator**: Simbol yang menunjukkan operasi aritmetika, relasi, logika, atau penugasan (mis. `+`, `-`, `*`, `/`, `=`, `==`, `!=`, `<=`, `>=`, `&&`, `||`). Harus memperhatikan aturan longest-match (contoh: kenali `==` sebelum dua token `=`). Contoh pola: `==|!=|<=|>=|&&|\|\||\+|-|\*|/|=|<|>`.
 
 ```cpp
 int main(){ 
